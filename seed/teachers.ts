@@ -1,6 +1,6 @@
-import { setTeacherPicture } from "@/prisma/seed/utils"
 import { prisma } from "@/utils/prismaClient"
 import { hash } from "bcrypt"
+import { setTeacherPicture } from "./api/setTeacherPic"
 const path = require("path")
 const TEACHER_DATA = [
     {

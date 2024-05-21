@@ -1,5 +1,5 @@
+import getRandomArbitraryNumber from '@/utils/getRandomArbitraryNumber'
 import { prisma } from './prisma'
-import getRandomArbitraryNumber from '../../src/utils/getRandomArbitraryNumber'
 
 export async function createSubjectAttendency(
     studentId: string,

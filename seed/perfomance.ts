@@ -1,4 +1,4 @@
-import getRandomArbitraryNumber from '../../src/utils/getRandomArbitraryNumber'
+import getRandomArbitraryNumber from '@/utils/getRandomArbitraryNumber'
 import { prisma } from './prisma'
 import { addDays, format } from 'date-fns'
 
@@ -10,7 +10,7 @@ export async function createPerformance(studentId: string) {
             id: studentId,
         },
         select: {
-            live_classes: {
+            liveClasses: {
                 select: {
                     id: true,
                     subjectId: true,
@@ -18,7 +18,7 @@ export async function createPerformance(studentId: string) {
             },
         },
     })
-    const classes = query?.live_classes ?? []
+    const classes = query?.liveClasses ?? []
     for (let i = 0; i < classes.length; i++) {
         const d = format(addDays(new Date('2024-01-01'), i), 'yyyy-MM-dd')
         const date = new Date(d)
@@ -27,7 +27,7 @@ export async function createPerformance(studentId: string) {
                 date: date,
                 outOf: 50,
                 subjectId: classes[i].subjectId,
-                klass: {
+                LiveClass: {
                     connect: {
                         id: classes[i].id,
                     },

@@ -5,7 +5,7 @@ export async function createReport(studentId: string, termId: string) {
         data: {
             studentId: studentId,
             termId: termId,
-            entries: {
+            ReportEntry: {
                 create: [
                     {
                         subject: 'Mathematics',
@@ -71,7 +71,7 @@ export async function createReport(studentId: string, termId: string) {
             },
         },
         include: {
-            entries: true,
+            ReportEntry: true,
         },
     })
 

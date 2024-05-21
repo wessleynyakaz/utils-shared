@@ -145,7 +145,7 @@ export async function createAssignments(
                 id: String(i + 1),
             },
             data: {
-                resources: {
+                Resource: {
                     connect: { id: String(i + 1) },
                 },
             },

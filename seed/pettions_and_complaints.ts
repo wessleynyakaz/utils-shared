@@ -9,7 +9,7 @@ export async function createPetitions(
         data: {
             description: 'Build a Cafeteria',
             mobilizerId: mobilizerId,
-            ballot: {
+            PetitionSlip: {
                 createMany: {
                     data: [
                         {
@@ -34,7 +34,7 @@ export async function createPetitions(
             issuedDate: new Date('2023-11-23'),
             submittedDate: new Date('2023-12-01'),
             status: 'ACCEPTED',
-            ballot: {
+            PetitionSlip: {
                 createMany: {
                     data: [
                         {

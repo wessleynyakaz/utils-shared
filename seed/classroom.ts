@@ -14,7 +14,7 @@ export async function createClassRoom(teacher_id: string[]) {
                 id: klass.id,
             },
             data: {
-                Teacher_teachingClasses: {
+                class_teacher: {
                     connect: {
                         id: id
                     }

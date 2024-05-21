@@ -79,7 +79,7 @@ export async function createUser(assignments: number, classRoomId: string) {
                     email: user.email,
                 },
                 data: {
-                    live_classes: {
+                    liveClasses: {
                         connect: {
                             id: klass.id,
                         },
@@ -119,10 +119,10 @@ export async function createUser(assignments: number, classRoomId: string) {
             id: '1',
         },
         data: {
-            resources: {
+            Resource: {
                 connect: { id: '1' },
             },
-            submissions: {
+            AssignmentSubmission: {
                 create: {
                     studentId: user.id,
                     documents: ['test.worked'],
